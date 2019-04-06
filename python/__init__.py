@@ -33,4 +33,5 @@ except ImportError:
 # import any pure python here
 from aausat4_fec import aausat4_fec
 from aausat4_beacon_parser import aausat4_beacon_parser
+from aausat4_fec_encoder import aausat4_fec_encoder
 #

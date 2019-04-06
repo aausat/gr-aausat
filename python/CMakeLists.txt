@@ -34,7 +34,9 @@ GR_PYTHON_INSTALL(
     beacon.py
     fec.py
     aausat4_fec.py
-    aausat4_beacon_parser.py DESTINATION ${GR_PYTHON_DIR}/aausat
+    aausat4_beacon_parser.py
+    aausat4_fec_encoder.py
+    DESTINATION ${GR_PYTHON_DIR}/aausat
 )
 
 ########################################################################
@@ -45,3 +47,4 @@ include(GrTest)
 set(GR_TEST_TARGET_DEPS gnuradio-aausat)
 set(GR_TEST_PYTHON_DIRS ${CMAKE_BINARY_DIR}/swig)
 GR_ADD_TEST(qa_aausat_parser ${PYTHON_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/qa_aausat_parser.py)
+GR_ADD_TEST(qa_aausat4_fec_encoder ${PYTHON_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/qa_aausat4_fec_encoder.py)

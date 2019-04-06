@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<block>
+  <name>aausat4_fec_encoder</name>
+  <key>aausat_aausat4_fec_encoder</key>
+  <category>[aausat]</category>
+  <import>import aausat</import>
+  <make>aausat.aausat4_fec_encoder($syncword,$traininglen,$hmac,$verbose)</make>
+  <param>
+    <name>Syncword</name>
+    <key>syncword</key>
+    <type>string</type>
+  </param>
+  <param>
+    <name>Training length</name>
+    <key>traininglen</key>
+    <value>60</value>
+    <type>int</type>
+  </param>
+  <param>
+    <name>HMAC</name>
+    <key>hmac</key>
+    <value>False</value>
+    <type>bool</type>
+    <option>
+      <name>Off</name>
+      <key>False</key>
+    </option>
+    <option>
+      <name>On</name>
+      <key>True</key>
+    </option>
+  </param>
+  <param>
+    <name>Verbose</name>
+    <key>verbose</key>
+    <value>False</value>
+    <type>bool</type>
+    <option>
+      <name>Off</name>
+      <key>False</key>
+    </option>
+    <option>
+      <name>On</name>
+      <key>True</key>
+    </option>
+  </param>
+
+  <sink>
+    <name>in</name>
+    <type>message</type>
+  </sink>
+  <source>
+    <name>out</name>
+    <type>message</type>
+  </source>
+</block>
