@@ -19,5 +19,7 @@
 
 install(FILES
     aausat_aausat4_fec.xml
-    aausat_aausat4_beacon_parser.xml DESTINATION share/gnuradio/grc/blocks
+    aausat_aausat4_beacon_parser.xml
+    aausat_aausat4_fec_encoder.xml
+    DESTINATION share/gnuradio/grc/blocks
 )
